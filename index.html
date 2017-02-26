@@ -4,7 +4,7 @@
     <title></title>
     <meta charset="utf-8" />
     <link rel="stylesheet" types="text/css" href="styles.css" />
-    <canvas id="gameCanvas" width="1300" height="600" style="border:1px solid #000000;"></canvas>
+    <canvas id="gameCanvas" width="2300" height="1600" style="border:1px solid #000000;"></canvas>
 </head>
 <body>
     <!--<div class="circle"></div>-->
@@ -39,7 +39,7 @@
             setInterval(updateMousePosition, 50);
         });
 
-        function updateMousePosition() {
+        function updateMousePosition(   ) {
             if (moved && playersHub.currentPlayer) {
                 var player = game.getPlayer(playersHub.currentPlayer.id);
                 if (player) {
