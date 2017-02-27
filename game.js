@@ -3,8 +3,6 @@
         this.canvas = canvas;
         this.players = {};
         this.shapes = {};
-        this.oldPointX = 0;
-        this.oldPOintY = 0;
         //this.canvas.getContext().scale(1.2, 1.2);
     }
 
@@ -42,9 +40,6 @@
         //    x: this.oldPointX,
         //    y: this.oldPointY,
         //}, 1);
-
-        this.oldPointX = this.currentPlayer.circle.circle.left;
-        this.oldPOintY = this.currentPlayer.circle.circle.top;
         this.canvas.renderAll();
         
         let scrollTop = this.currentPlayer.circle.circle.top + (this.currentPlayer.circle.radius) - window.innerHeight / 2;
