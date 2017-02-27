@@ -41,11 +41,12 @@
         //    y: this.oldPointY,
         //}, 1);
         this.canvas.renderAll();
-        
-        let scrollTop = this.currentPlayer.circle.circle.top + (this.currentPlayer.circle.radius) - window.innerHeight / 2;
-        let scrollLeft = this.currentPlayer.circle.circle.left + (this.currentPlayer.circle.radius) - window.innerWidth / 2;
-        $(document.body).scrollTop(scrollTop);
-        $(document.body).scrollLeft(scrollLeft);
+        if (this.currentPlayer && this.currentPlayer.circle) {
+            let scrollTop = this.currentPlayer.circle.circle.top + (this.currentPlayer.circle.radius) - window.innerHeight / 2;
+            let scrollLeft = this.currentPlayer.circle.circle.left + (this.currentPlayer.circle.radius) - window.innerWidth / 2;
+            $(document.body).scrollTop(scrollTop);
+            $(document.body).scrollLeft(scrollLeft);
+        }
 
         //console.log(this.currentPlayer.circle.circle.top);
         //this.canvas.zoomToPoint({
