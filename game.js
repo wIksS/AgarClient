@@ -12,6 +12,14 @@
         circle.draw(this.canvas);
     }
 
+    updateShape(id,position)
+    {
+        let circle = this.shapes[id];
+        if (circle) {
+            circle.move(this.canvas, position);
+        }
+    }
+
     removeShape(id) {
         if (this.shapes[id]) {
             this.shapes[id].remove(this.canvas);
